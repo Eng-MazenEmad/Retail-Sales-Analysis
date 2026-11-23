@@ -1,7 +1,7 @@
 # 🛒 Retail-Sales-Analysis
 
 ## 📌 Project Name
-Retail Sales Analysis & Forecasting
+Retail Sales Analysis
 
 ## 🛡️ Team Name
 Avengers
