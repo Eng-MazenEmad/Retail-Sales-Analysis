@@ -1,0 +1,184 @@
+﻿year_month,category,target_amount
+2020-03,Electronics,14400
+2020-03,Furniture,34600
+2020-03,Office Supplies,12900
+2020-04,Electronics,43900
+2020-04,Furniture,43100
+2020-04,Office Supplies,42200
+2020-05,Electronics,34200
+2020-05,Furniture,41600
+2020-05,Office Supplies,37200
+2020-06,Electronics,15800
+2020-06,Furniture,22400
+2020-06,Office Supplies,11300
+2020-07,Electronics,8100
+2020-07,Furniture,34000
+2020-07,Office Supplies,30700
+2020-08,Electronics,22200
+2020-08,Furniture,42800
+2020-08,Office Supplies,30800
+2020-09,Electronics,37600
+2020-09,Furniture,50800
+2020-09,Office Supplies,22800
+2020-10,Electronics,25800
+2020-10,Furniture,36400
+2020-10,Office Supplies,39600
+2020-11,Electronics,19400
+2020-11,Furniture,33600
+2020-11,Office Supplies,49700
+2020-12,Electronics,29200
+2020-12,Furniture,36500
+2020-12,Office Supplies,43700
+2021-01,Electronics,9800
+2021-01,Furniture,3700
+2021-01,Office Supplies,8100
+2021-02,Electronics,48100
+2021-02,Furniture,34000
+2021-02,Office Supplies,12500
+2021-03,Electronics,50100
+2021-03,Furniture,20300
+2021-03,Office Supplies,35000
+2021-04,Electronics,28600
+2021-04,Furniture,30000
+2021-04,Office Supplies,30800
+2021-05,Electronics,49500
+2021-05,Furniture,40700
+2021-05,Office Supplies,47200
+2021-06,Electronics,46300
+2021-06,Furniture,29700
+2021-06,Office Supplies,25000
+2021-07,Electronics,29700
+2021-07,Furniture,1500
+2021-07,Office Supplies,62700
+2021-08,Electronics,15700
+2021-08,Furniture,45900
+2021-08,Office Supplies,23000
+2021-09,Electronics,34200
+2021-09,Furniture,4700
+2021-09,Office Supplies,28000
+2021-10,Electronics,29800
+2021-10,Furniture,34100
+2021-10,Office Supplies,88800
+2021-11,Electronics,47800
+2021-11,Furniture,72600
+2021-11,Office Supplies,29900
+2021-12,Electronics,24900
+2021-12,Furniture,77200
+2021-12,Office Supplies,47600
+2022-01,Electronics,62600
+2022-01,Furniture,41000
+2022-01,Office Supplies,55300
+2022-02,Electronics,50000
+2022-02,Furniture,51300
+2022-02,Office Supplies,18200
+2022-03,Electronics,33500
+2022-03,Furniture,33800
+2022-03,Office Supplies,28900
+2022-04,Electronics,32000
+2022-04,Furniture,22500
+2022-04,Office Supplies,58800
+2022-05,Electronics,74600
+2022-05,Furniture,61100
+2022-05,Office Supplies,15900
+2022-06,Electronics,43000
+2022-06,Furniture,64100
+2022-06,Office Supplies,59400
+2022-07,Electronics,18500
+2022-07,Furniture,27300
+2022-07,Office Supplies,10500
+2022-08,Electronics,36300
+2022-08,Furniture,60700
+2022-08,Office Supplies,89100
+2022-09,Electronics,14400
+2022-09,Furniture,21500
+2022-09,Office Supplies,19500
+2022-10,Electronics,44900
+2022-10,Furniture,38600
+2022-10,Office Supplies,69000
+2022-11,Electronics,14800
+2022-11,Furniture,16100
+2022-11,Office Supplies,18400
+2022-12,Electronics,91800
+2022-12,Furniture,72100
+2022-12,Office Supplies,75300
+2023-01,Electronics,30500
+2023-01,Furniture,16700
+2023-01,Office Supplies,17400
+2023-02,Electronics,4700
+2023-02,Furniture,21500
+2023-02,Office Supplies,31900
+2023-03,Electronics,59800
+2023-03,Furniture,15300
+2023-03,Office Supplies,26300
+2023-04,Electronics,36200
+2023-04,Furniture,57400
+2023-04,Office Supplies,17600
+2023-05,Electronics,44500
+2023-05,Furniture,19100
+2023-05,Office Supplies,13000
+2023-06,Electronics,73600
+2023-06,Furniture,19200
+2023-06,Office Supplies,17000
+2023-07,Electronics,78900
+2023-07,Furniture,71300
+2023-07,Office Supplies,48000
+2023-08,Electronics,34100
+2023-08,Furniture,27500
+2023-08,Office Supplies,15500
+2023-09,Electronics,46900
+2023-09,Furniture,25500
+2023-09,Office Supplies,31800
+2023-10,Electronics,53400
+2023-10,Furniture,46000
+2023-10,Office Supplies,27800
+2023-11,Electronics,11900
+2023-11,Furniture,34500
+2023-11,Office Supplies,51900
+2023-12,Electronics,63700
+2023-12,Furniture,52300
+2023-12,Office Supplies,14700
+2024-01,Electronics,13700
+2024-01,Furniture,2300
+2024-01,Office Supplies,36700
+2024-02,Electronics,33600
+2024-02,Furniture,43100
+2024-02,Office Supplies,25900
+2024-03,Electronics,32100
+2024-03,Furniture,49100
+2024-03,Office Supplies,52600
+2024-04,Electronics,26200
+2024-04,Furniture,61500
+2024-04,Office Supplies,66100
+2024-05,Electronics,19200
+2024-05,Furniture,46400
+2024-05,Office Supplies,43500
+2024-06,Electronics,39900
+2024-06,Furniture,52100
+2024-06,Office Supplies,50400
+2024-07,Electronics,29200
+2024-07,Furniture,36700
+2024-07,Office Supplies,59700
+2024-08,Electronics,29300
+2024-08,Furniture,11500
+2024-08,Office Supplies,31700
+2024-09,Electronics,40600
+2024-09,Furniture,28700
+2024-09,Office Supplies,19100
+2024-10,Electronics,30500
+2024-10,Furniture,12100
+2024-10,Office Supplies,48100
+2024-11,Electronics,12200
+2024-11,Furniture,32900
+2024-11,Office Supplies,19500
+2024-12,Electronics,35800
+2024-12,Furniture,48600
+2024-12,Office Supplies,29900
+2025-01,Electronics,57600
+2025-01,Furniture,17000
+2025-01,Office Supplies,55400
+2025-02,Electronics,39600
+2025-02,Furniture,30600
+2025-02,Office Supplies,30900
+2025-03,Electronics,13200
+2025-03,Furniture,9500
+2025-03,Office Supplies,38300
