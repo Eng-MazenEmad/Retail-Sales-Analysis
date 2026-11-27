@@ -1,0 +1,55 @@
+table Customer
+	lineageTag: ff9ef51a-219c-4f91-b1f0-f86a380de54b
+
+	column customer_id
+		dataType: string
+		lineageTag: c832ac6c-e795-43e4-8e06-3796ddeac846
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_name
+		dataType: string
+		lineageTag: 4f8c9b3c-20af-4b50-81ec-7d4e88bad788
+		summarizeBy: none
+		sourceColumn: customer_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_segment
+		dataType: string
+		lineageTag: 5e458f3d-919b-4b6b-97bf-dd0e62253bfa
+		summarizeBy: none
+		sourceColumn: customer_segment
+
+		annotation SummarizationSetBy = Automatic
+
+	column state
+		dataType: string
+		lineageTag: f3f7da1f-2145-4b3b-a1a9-4f14b04bf35a
+		summarizeBy: none
+		sourceColumn: state
+
+		annotation SummarizationSetBy = Automatic
+
+	column city
+		dataType: string
+		lineageTag: 1627e91b-5cc7-49dd-a640-d7b914eb0f52
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Customer = m
+		mode: import
+		source =
+				let
+				  Source = source,
+				  #"Choose columns" = Table.SelectColumns(Source, {"customer_id", "customer_name", "customer_segment", "state", "city"}),
+				  #"Removed duplicates" = Table.Distinct(#"Choose columns", {"customer_id"})
+				in
+				  #"Removed duplicates"
+
+	annotation PBI_ResultType = Table
+

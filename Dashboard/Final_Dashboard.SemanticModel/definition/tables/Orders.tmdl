@@ -1,0 +1,161 @@
+table Orders
+	lineageTag: 4856805d-354d-4d49-a501-a8d4f0d38cb7
+
+	column order_id
+		dataType: string
+		lineageTag: 0757ada5-17b3-4976-b8f3-6cdec87cd524
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 12e5a808-cdd0-4568-b2d7-2265cac75b5b
+		summarizeBy: none
+		sourceColumn: order_date
+
+		variation Variation
+			isDefault
+			relationship: 114770b3-22d1-44ef-aa6b-b8c758673cc5
+			defaultHierarchy: LocalDateTable_57497ff3-2494-44b9-a7c0-3a8e0996dc4a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column delivery_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: d6f99b17-2b7f-4a97-8f4b-ae2027987c82
+		summarizeBy: none
+		sourceColumn: delivery_date
+
+		variation Variation
+			isDefault
+			relationship: f5ee6fce-1a7f-41fe-a0f4-05deecc22781
+			defaultHierarchy: LocalDateTable_467c8449-8ea1-4880-bd59-144ffaa10c3e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column order_status
+		dataType: string
+		lineageTag: dffe0511-8ca7-4bc6-88ab-227f33ef19b2
+		summarizeBy: none
+		sourceColumn: order_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_id
+		dataType: string
+		lineageTag: 7329f2e7-ee62-456a-be26-a8be6b65eb48
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: string
+		lineageTag: e017672d-1fe2-426c-ae28-43046eb6ecd2
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column unit_price
+		dataType: double
+		lineageTag: 769c9248-bb74-4dea-8a16-8fb3cfb6b57f
+		summarizeBy: sum
+		sourceColumn: unit_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 06c50835-752b-4964-808d-34fe0f9aac5f
+		summarizeBy: sum
+		sourceColumn: quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column discount
+		dataType: double
+		lineageTag: a7bcebcf-4c41-4fa9-9817-2c5f8764d653
+		summarizeBy: sum
+		sourceColumn: discount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column amount
+		dataType: int64
+		formatString: 0
+		lineageTag: 8d3f8d9b-00b6-4055-9b55-f915bd68f0d0
+		summarizeBy: sum
+		sourceColumn: amount
+
+		annotation SummarizationSetBy = Automatic
+
+	column profit
+		dataType: int64
+		formatString: 0
+		lineageTag: 0d3aa52e-7d57-44ed-b91e-3f8ca84c5e22
+		summarizeBy: sum
+		sourceColumn: profit
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_mode
+		dataType: string
+		lineageTag: f733d165-8d87-4132-b364-e47516c9059d
+		summarizeBy: none
+		sourceColumn: payment_mode
+
+		annotation SummarizationSetBy = Automatic
+
+	column year_month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 16b86b34-e3d6-4823-a1ba-7a1ee16d3b26
+		summarizeBy: none
+		sourceColumn: year_month
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column sales_channel
+		dataType: string
+		lineageTag: 373ff9e3-2a72-450e-81a5-420f4314b685
+		summarizeBy: none
+		sourceColumn: sales_channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column delivery_days
+		dataType: int64
+		formatString: 0
+		lineageTag: efc24388-6054-4628-b873-352f562ff589
+		summarizeBy: sum
+		sourceColumn: delivery_days
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Orders = m
+		mode: import
+		source =
+				let
+				  Source = source,
+				  #"Choose columns" = Table.SelectColumns(Source, {"order_id", "order_date", "delivery_date", "order_status", "customer_id", "product_id", "unit_price", "quantity", "discount", "amount", "profit", "payment_mode", "year_month", "sales_channel", "delivery_days"})
+				in
+				  #"Choose columns"
+
+	annotation PBI_ResultType = Table
+

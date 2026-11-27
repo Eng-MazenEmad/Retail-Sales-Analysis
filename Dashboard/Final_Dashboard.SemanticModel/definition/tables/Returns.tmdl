@@ -1,0 +1,32 @@
+table Returns
+	lineageTag: 1d470b4f-d1cd-43dc-ae3b-ca6d599bfd8c
+
+	column order_id
+		dataType: string
+		lineageTag: d5ece756-2b24-4ae3-8e01-31462f6fc99d
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_status
+		dataType: string
+		lineageTag: 8001c676-72a8-4ab2-b27e-a8fdfc8e3577
+		summarizeBy: none
+		sourceColumn: order_status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Returns = m
+		mode: import
+		source =
+				let
+				  Source = source,
+				  #"Choose columns" = Table.SelectColumns(Source, {"order_id", "order_status"}),
+				  #"Filtered rows" = Table.SelectRows(#"Choose columns", each ([order_status] = "Cancelled")),
+				  #"Removed duplicates" = Table.Distinct(#"Filtered rows", {"order_id"})
+				in
+				  #"Removed duplicates"
+
+	annotation PBI_ResultType = Table
+

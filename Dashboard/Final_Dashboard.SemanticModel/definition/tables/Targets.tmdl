@@ -1,0 +1,41 @@
+table Targets
+	lineageTag: be60737f-089b-457e-ac21-5f6a988afd99
+
+	column year_month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4483d6d0-e1c2-4d07-8d4d-ae0a11239a9a
+		summarizeBy: none
+		sourceColumn: year_month
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column category
+		dataType: string
+		lineageTag: 6538c154-9402-45dc-9095-9a7546c345b1
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column target_amount
+		dataType: int64
+		formatString: 0
+		lineageTag: 1a2d5e15-3b78-4e65-9940-b261af50a896
+		summarizeBy: sum
+		sourceColumn: target_amount
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Targets = m
+		mode: import
+		source =
+				let
+				  Source = source_2
+				in
+				  Source
+
+	annotation PBI_ResultType = Table
+

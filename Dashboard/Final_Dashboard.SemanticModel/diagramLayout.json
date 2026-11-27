@@ -1,0 +1,99 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 74.16422384215906,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 810.26644413335509,
+            "y": 0
+          },
+          "nodeIndex": "Customer",
+          "nodeLineageTag": "ff9ef51a-219c-4f91-b1f0-f86a380de54b",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 388.25345314594523,
+            "y": 24.054027927732797
+          },
+          "nodeIndex": "Orders",
+          "nodeLineageTag": "4856805d-354d-4d49-a501-a8d4f0d38cb7",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "Products",
+          "nodeLineageTag": "32c94e1d-b7dc-41f7-bce1-c708557c94e5",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 330.19871678142124
+          },
+          "nodeIndex": "Returns",
+          "nodeLineageTag": "1d470b4f-d1cd-43dc-ae3b-ca6d599bfd8c",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 804.17548220365359,
+            "y": 344.42368360595924
+          },
+          "nodeIndex": "Date",
+          "nodeLineageTag": "16ee6b3a-ec52-4500-99c8-0f35a8a9b235",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1062.5700241186214,
+            "y": 497.47071937401029
+          },
+          "nodeIndex": "Targets",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 79.55318203769987,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

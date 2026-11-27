@@ -1,0 +1,31 @@
+table Date
+	lineageTag: 16ee6b3a-ec52-4500-99c8-0f35a8a9b235
+
+	column year_month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2d26a500-bd3c-41cd-a4ee-bb9d2f785314
+		summarizeBy: none
+		sourceColumn: year_month
+
+		variation Variation
+			isDefault
+			relationship: e96baa80-53a3-456f-9f72-3f19b8793c76
+			defaultHierarchy: LocalDateTable_13b1e1c2-ba2c-4119-8383-a25a08b9a31b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition Date = m
+		mode: import
+		source =
+				let
+				  Source = source_2,
+				  #"Choose columns" = Table.SelectColumns(Source, {"year_month"}),
+				  #"Removed duplicates" = Table.Distinct(#"Choose columns", {"year_month"})
+				in
+				  #"Removed duplicates"
+
+	annotation PBI_ResultType = Table
+

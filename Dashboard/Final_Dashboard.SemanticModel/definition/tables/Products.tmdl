@@ -1,0 +1,47 @@
+table Products
+	lineageTag: 32c94e1d-b7dc-41f7-bce1-c708557c94e5
+
+	column product_id
+		dataType: string
+		lineageTag: 2da21622-5a99-45a1-8f31-47445f2e6858
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name
+		dataType: string
+		lineageTag: 2cc4c2fe-046d-42ec-b59f-66cf11ad1e2c
+		summarizeBy: none
+		sourceColumn: product_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column category
+		dataType: string
+		lineageTag: 0bd13ee3-e7c3-48e4-9563-cf287a0821fb
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column sub_category
+		dataType: string
+		lineageTag: ff26319b-3268-4685-91ea-686cde57a7b4
+		summarizeBy: none
+		sourceColumn: sub_category
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Products = m
+		mode: import
+		source =
+				let
+				  Source = source,
+				  #"Choose columns" = Table.SelectColumns(Source, {"product_id", "product_name", "category", "sub_category"}),
+				  #"Removed duplicates" = Table.Distinct(#"Choose columns", {"product_id"})
+				in
+				  #"Removed duplicates"
+
+	annotation PBI_ResultType = Table
+

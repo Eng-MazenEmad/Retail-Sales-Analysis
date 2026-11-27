@@ -1,0 +1,22 @@
+expression source =
+		let
+		  Source = Csv.Document(File.Contents("D:\Mezox\DEPI\Final Project\Final Project\Datasets\Cleaned_Sales.csv"), [Delimiter = ",", Columns = 22, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
+		  #"Promoted headers" = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+		  #"Changed column type" = Table.TransformColumnTypes(#"Promoted headers", {{"order_id", type text}, {"order_date", type date}, {"delivery_date", type date}, {"order_status", type text}, {"customer_id", type text}, {"customer_name", type text}, {"customer_segment", type text}, {"state", type text}, {"city", type text}, {"product_id", type text}, {"product_name", type text}, {"category", type text}, {"sub_category", type text}, {"unit_price", type number}, {"quantity", Int64.Type}, {"discount", type number}, {"amount", Int64.Type}, {"profit", Int64.Type}, {"payment_mode", type text}, {"year_month", type date}, {"sales_channel", type text}, {"delivery_days", Int64.Type}})
+		in
+		  #"Changed column type"
+	lineageTag: 15da479b-ff18-4677-bf9d-512f76265a81
+
+	annotation PBI_ResultType = Table
+
+expression source_2 =
+		let
+		  Source = Csv.Document(File.Contents("D:\Mezox\DEPI\Final Project\Final Project\Datasets\Cleaned_Targets.csv"), [Delimiter = ",", Columns = 3, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
+		  #"Promoted headers" = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+		  #"Changed column type" = Table.TransformColumnTypes(#"Promoted headers", {{"year_month", type date}, {"category", type text}, {"target_amount", Int64.Type}})
+		in
+		  #"Changed column type"
+	lineageTag: e04b5063-704b-4767-a3ff-8c69dd15db26
+
+	annotation PBI_ResultType = Table
+
